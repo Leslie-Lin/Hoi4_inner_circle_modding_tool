@@ -1,0 +1,764 @@
+MY_TEST_TAN_fritz_todt_leave_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_fritz_todt_leave_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_fritz_todt_is_on_the_seat = yes
+            }
+               if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 1 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_industry_development
+            check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 1 }
+        }
+        deactivate_shine_on_focus = TAN_industry_development
+        clr_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+        set_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_fritz_todt_upgrade
+            check_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 1 }
+        }
+        deactivate_shine_on_focus = TAN_fritz_todt_upgrade
+        clr_country_flag = MY_TEST_TAN_fritz_todt_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 1 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_industry_development
+            check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 1 }
+        }
+        deactivate_shine_on_focus = TAN_industry_development
+        clr_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+        set_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_fritz_todt_upgrade
+            check_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 1 }
+        }
+        deactivate_shine_on_focus = TAN_fritz_todt_upgrade
+        clr_country_flag = MY_TEST_TAN_fritz_todt_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 1 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_industry_development
+            check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 1 }
+        }
+        deactivate_shine_on_focus = TAN_industry_development
+        clr_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+        set_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_fritz_todt_upgrade
+            check_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 1 }
+        }
+        deactivate_shine_on_focus = TAN_fritz_todt_upgrade
+        clr_country_flag = MY_TEST_TAN_fritz_todt_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 0 }
+    }
+
+    }
+
+        }
+    }
+}
+MY_TEST_TAN_albert_speer_leave_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_albert_speer_leave_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_albert_speer_is_on_the_seat = yes
+            }
+               if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 2 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        MY_TEST_TAN_albert_speer_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_industry_development
+            check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 2 }
+        }
+        deactivate_shine_on_focus = TAN_industry_development
+        clr_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+        set_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_albert_speer_upgrade
+            check_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 2 }
+        }
+        deactivate_shine_on_focus = TAN_albert_speer_upgrade
+        clr_country_flag = MY_TEST_TAN_albert_speer_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 2 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        MY_TEST_TAN_albert_speer_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_industry_development
+            check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 2 }
+        }
+        deactivate_shine_on_focus = TAN_industry_development
+        clr_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+        set_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_albert_speer_upgrade
+            check_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 2 }
+        }
+        deactivate_shine_on_focus = TAN_albert_speer_upgrade
+        clr_country_flag = MY_TEST_TAN_albert_speer_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 2 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        MY_TEST_TAN_albert_speer_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_industry_development
+            check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 2 }
+        }
+        deactivate_shine_on_focus = TAN_industry_development
+        clr_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+        set_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_albert_speer_upgrade
+            check_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 2 }
+        }
+        deactivate_shine_on_focus = TAN_albert_speer_upgrade
+        clr_country_flag = MY_TEST_TAN_albert_speer_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 0 }
+    }
+
+    }
+
+        }
+    }
+}
+MY_TEST_TAN_joseph_goebbels_leave_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_joseph_goebbels_leave_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_joseph_goebbels_is_on_the_seat = yes
+            }
+               if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 5 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_great_mon_memory
+            check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_great_mon_memory
+        clr_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+        set_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_joseph_goebbels_upgrade
+            check_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_joseph_goebbels_upgrade
+        clr_country_flag = MY_TEST_TAN_joseph_goebbels_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+            check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+        clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+        set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Universal_Empire
+            check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_Universal_Empire
+        clr_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+        set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_joseph_goebbels_war_to_sov
+            check_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_joseph_goebbels_war_to_sov
+        clr_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_in_progress_flag
+        set_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 5 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_great_mon_memory
+            check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_great_mon_memory
+        clr_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+        set_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_joseph_goebbels_upgrade
+            check_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_joseph_goebbels_upgrade
+        clr_country_flag = MY_TEST_TAN_joseph_goebbels_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+            check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+        clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+        set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Universal_Empire
+            check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_Universal_Empire
+        clr_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+        set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_joseph_goebbels_war_to_sov
+            check_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_joseph_goebbels_war_to_sov
+        clr_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_in_progress_flag
+        set_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 5 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_great_mon_memory
+            check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_great_mon_memory
+        clr_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+        set_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_joseph_goebbels_upgrade
+            check_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_joseph_goebbels_upgrade
+        clr_country_flag = MY_TEST_TAN_joseph_goebbels_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+            check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+        clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+        set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Universal_Empire
+            check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_Universal_Empire
+        clr_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+        set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_joseph_goebbels_war_to_sov
+            check_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 5 }
+        }
+        deactivate_shine_on_focus = TAN_joseph_goebbels_war_to_sov
+        clr_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_in_progress_flag
+        set_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 0 }
+    }
+
+    }
+
+        }
+    }
+}
+MY_TEST_TAN_genghis_khan_leave_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_genghis_khan_leave_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_genghis_khan_is_on_the_seat = yes
+            }
+               if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 100 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_great_mon_memory
+            check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_great_mon_memory
+        clr_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+        set_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_genghis_khan_upgrade
+            check_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_genghis_khan_upgrade
+        clr_country_flag = MY_TEST_TAN_genghis_khan_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+            check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+        clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+        set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Universal_Empire
+            check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_Universal_Empire
+        clr_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+        set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_genghis_khan_war_to_sov
+            check_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_genghis_khan_war_to_sov
+        clr_country_flag = MY_TEST_TAN_genghis_khan_war_to_sov_in_progress_flag
+        set_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 100 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_great_mon_memory
+            check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_great_mon_memory
+        clr_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+        set_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_genghis_khan_upgrade
+            check_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_genghis_khan_upgrade
+        clr_country_flag = MY_TEST_TAN_genghis_khan_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+            check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+        clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+        set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Universal_Empire
+            check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_Universal_Empire
+        clr_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+        set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_genghis_khan_war_to_sov
+            check_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_genghis_khan_war_to_sov
+        clr_country_flag = MY_TEST_TAN_genghis_khan_war_to_sov_in_progress_flag
+        set_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 0 }
+    }
+
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 100 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+            if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_great_mon_memory
+            check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_great_mon_memory
+        clr_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+        set_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_genghis_khan_upgrade
+            check_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_genghis_khan_upgrade
+        clr_country_flag = MY_TEST_TAN_genghis_khan_upgrade_in_progress_flag
+        set_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+            check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+        clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+        set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_Universal_Empire
+            check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_Universal_Empire
+        clr_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+        set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 0 }
+    }
+    else_if = {
+        limit = {
+            has_shine_effect_on_focus = TAN_genghis_khan_war_to_sov
+            check_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 100 }
+        }
+        deactivate_shine_on_focus = TAN_genghis_khan_war_to_sov
+        clr_country_flag = MY_TEST_TAN_genghis_khan_war_to_sov_in_progress_flag
+        set_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 0 }
+    }
+
+    }
+
+        }
+    }
+}
+
+MY_TEST_make_MY_TEST_TAN_ascended_advisor_1_empty = {
+      if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 1 }
+            }
+            MY_TEST_TAN_fritz_todt_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 2 }
+            }
+            MY_TEST_TAN_albert_speer_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 5 }
+            }
+            MY_TEST_TAN_joseph_goebbels_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 100 }
+            }
+            MY_TEST_TAN_genghis_khan_leave_seat = yes
+    }
+
+}
+MY_TEST_make_MY_TEST_TAN_ascended_advisor_2_empty = {
+      if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 1 }
+            }
+            MY_TEST_TAN_fritz_todt_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 2 }
+            }
+            MY_TEST_TAN_albert_speer_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 5 }
+            }
+            MY_TEST_TAN_joseph_goebbels_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 100 }
+            }
+            MY_TEST_TAN_genghis_khan_leave_seat = yes
+    }
+
+}
+MY_TEST_make_MY_TEST_TAN_ascended_advisor_3_empty = {
+      if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 1 }
+            }
+            MY_TEST_TAN_fritz_todt_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 2 }
+            }
+            MY_TEST_TAN_albert_speer_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 5 }
+            }
+            MY_TEST_TAN_joseph_goebbels_leave_seat = yes
+    }
+      else_if = {
+            limit = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 100 }
+            }
+            MY_TEST_TAN_genghis_khan_leave_seat = yes
+    }
+
+}
+MY_TEST_TAN_fritz_todt_give_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_fritz_todt_give_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_fritz_todt_is_on_the_seat = yes
+            }
+            log = "this character is already here!"
+        }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 1 }
+        MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 1 }
+        MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 1 }
+        MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+    }
+   else = {
+        set_variable = { MY_TEST_ascending_advisor = 1 }
+        country_event = MY_TEST_choose_who_leave_seat_event.1
+    }
+
+}
+}
+MY_TEST_TAN_albert_speer_give_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_albert_speer_give_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_albert_speer_is_on_the_seat = yes
+            }
+            log = "this character is already here!"
+        }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 2 }
+        MY_TEST_TAN_albert_speer_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 2 }
+        MY_TEST_TAN_albert_speer_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 2 }
+        MY_TEST_TAN_albert_speer_change_trait_effect = yes
+    }
+   else = {
+        set_variable = { MY_TEST_ascending_advisor = 2 }
+        country_event = MY_TEST_choose_who_leave_seat_event.1
+    }
+
+}
+}
+MY_TEST_TAN_joseph_goebbels_give_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_joseph_goebbels_give_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_joseph_goebbels_is_on_the_seat = yes
+            }
+            log = "this character is already here!"
+        }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 5 }
+        MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 5 }
+        MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 5 }
+        MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+    }
+   else = {
+        set_variable = { MY_TEST_ascending_advisor = 5 }
+        country_event = MY_TEST_choose_who_leave_seat_event.1
+    }
+
+}
+}
+MY_TEST_TAN_genghis_khan_give_seat = {
+    custom_effect_tooltip = {
+        localization_key = MY_TEST_TAN_genghis_khan_give_seat_tt
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                MY_TEST_TAN_genghis_khan_is_on_the_seat = yes
+            }
+            log = "this character is already here!"
+        }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_1 = 100 }
+        MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_2 = 100 }
+        MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+    }
+   else_if = {
+        limit = {
+            check_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+        }
+        set_variable = { MY_TEST_TAN_ascended_advisor_3 = 100 }
+        MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+    }
+   else = {
+        set_variable = { MY_TEST_ascending_advisor = 100 }
+        country_event = MY_TEST_choose_who_leave_seat_event.1
+    }
+
+}
+}

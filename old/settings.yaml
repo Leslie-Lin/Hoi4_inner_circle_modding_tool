@@ -1,0 +1,164 @@
+﻿###########################################################
+####                                                   #### 
+#                         基本设置                        #
+#                        basic setting                    #
+####                                                   ####
+###########################################################
+
+# 这个码会被加在自动生成的id前面以避免游戏里什么代码重复了
+# this text will be added in front of every auto-generated id to avoid duplication
+project_code: 'MY_TEST'
+
+# 输出路径
+# output dir
+dir_output: './output'
+
+# 与钢铁雄心4可用语言一致即可
+# The languages available in Hearts of Iron 4
+list_language:
+  - english
+  - simp_chinese
+  - braz_por
+  - french
+  - german
+  - polish
+  - russian
+  - spanish
+  - japanese
+
+# 储存人物信息的csv。
+# csv store characters
+csv_characters: 'example_input/characters.csv'
+
+# 储存国策的csv。
+# csv store national_focus.
+csv_focus: 'example_input/national_focus.csv'
+
+# 储存人物信息的csv
+# csv store characters
+csv_other_loc: 'example_input/other_localisation.csv'
+
+
+
+# Example use an inner circle with 3 seats, basically use german inner circle gui. 
+# 示例用的是一个有三个位置的核心圈，基本上用的是默认的德国核心圈gui。
+# you need to design your own gui. example use "interface\defaultgui.gui"
+# gui需要你自己设计。示例"interface\defaultgui.gui"
+
+
+# ID of inner circle window. You need to claim this ID in gui file you want to use. Example:
+# 核心圈窗口的ID。该ID需要在你想用的那个gui文件中声明，就像下面这样：
+# guiTypes = {
+#    containerWindowType = {
+#        name = "MY_TEST_focus_inlay_window"
+
+
+##########################################################
+####                                                  #### 
+#                  核心圈P语言代码相关设置                 #
+#        settings about inner circle P language code     #
+####                                                  ####
+##########################################################
+
+# list of variables store who is on the each seat
+# 储存每个位置上是什么人的variable列表
+list_seat_variables:
+  - 'MY_TEST_TAN_ascended_advisor_1'
+  - 'MY_TEST_TAN_ascended_advisor_2'
+  - 'MY_TEST_TAN_ascended_advisor_3'
+
+
+# variable store who is leaving in the process of change characters.
+# 换人时储存谁将会滚蛋的variable
+leaving_character_variable: 'MY_TEST_leaving_character_variable'
+
+
+# scripted_localisation store name of who is leaving in the process of change characters.
+# 换人时储存将会滚蛋的人的名字的scripted_localisation
+leaving_character_name_loc: 'MY_TEST_leaving_character_name'
+
+
+# scripted_localisation store trait of who is leaving in the process of change characters.
+# 换人时储存将会滚蛋的人的特质的scripted_localisation
+leaving_character_trait_loc: 'MY_TEST_leaving_character_trait'
+
+
+# variable store who is ascending in the process of change characters.
+# 换人时储存谁将会上台的variable
+ascending_character_variable: 'MY_TEST_ascending_advisor'
+
+
+# scripted_localisation store name of who is ascending in the process of change characters.
+# 换人时储存将会上台的人的名字的scripted_localisation
+ascending_character_name_loc: 'MY_TEST_ascending_character_name'
+
+
+# scripted_localisation store trait of who is ascending in the process of change characters.
+# 换人时储存将会上台的人的特质的scripted_localisation
+ascending_character_trait_loc: 'MY_TEST_ascending_character_trait'
+
+###########################################################
+####                                                   #### 
+#                   核心圈gui相关设置                      #
+#              settings about inner circle gui            #
+####                                                   ####
+###########################################################
+
+focus_inlay_window_ID: 'MY_TEST_focus_inlay_window'
+
+
+# position of inner circle window.
+# 核心圈窗口的位置。
+focus_inlay_window_x: 1100
+focus_inlay_window_y: 50
+
+
+# advisor portrait element id in gui file. （should be called in gui file）
+# 三个位置对应的gui文件中的肖像元素id，需要在gui文件中调用
+list_gui_portrait:
+  - 'ascended_advisor_1_portrait'
+  - 'ascended_advisor_2_portrait'
+  - 'ascended_advisor_3_portrait'
+
+
+
+# advisor name scripted_localisation（should be called in gui file）
+# 三个位置对应的人名的scripted_localisation，需要在gui文件中调用
+list_gui_name:
+  - 'GetName_TAN_ascended_advisor_1'
+  - 'GetName_TAN_ascended_advisor_2'
+  - 'GetName_TAN_ascended_advisor_3'
+
+
+# advisor trait name scripted_localisation（should be called in gui file）
+# 三个位置对应的特质名的scripted_localisation，需要在gui文件中调用
+list_gui_trait:
+  - 'GetTrait_TAN_ascended_advisor_1'
+  - 'GetTrait_TAN_ascended_advisor_2'
+  - 'GetTrait_TAN_ascended_advisor_3'
+
+
+
+###########################################################
+####                                                   #### 
+#                  自动国策控制相关设置                    #
+#           settings about focus auto control             #
+####                                                   ####
+###########################################################
+
+
+# 核心圈事件待处理标志
+# inner circle event pending flag
+circle_event_pending_flag: 'MY_TEST_circle_event_pending_flag'
+
+# 重新检查焦点的天数
+days_recheck_focus: 2
+
+# 重新检查焦点的随机天数
+days_recheck_focus_random_days: 3
+
+# 开始焦点的天数
+days_to_start_focus: 1
+
+# 开始焦点的随机天数
+days_to_start_focus_random_days: 1

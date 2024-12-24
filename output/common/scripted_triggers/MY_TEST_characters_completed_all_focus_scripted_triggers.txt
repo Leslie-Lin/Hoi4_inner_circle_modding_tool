@@ -1,0 +1,34 @@
+MY_TEST_TAN_fritz_todt_all_focus_completed = {
+    AND = {
+        has_completed_focus = TAN_industry_development
+has_completed_focus = TAN_fritz_todt_upgrade
+
+    }
+}
+MY_TEST_TAN_albert_speer_all_focus_completed = {
+    AND = {
+        has_completed_focus = TAN_industry_development
+has_completed_focus = TAN_albert_speer_upgrade
+
+    }
+}
+MY_TEST_TAN_joseph_goebbels_all_focus_completed = {
+    AND = {
+        has_completed_focus = TAN_great_mon_memory
+has_completed_focus = TAN_joseph_goebbels_upgrade
+has_completed_focus = TAN_Mongolia_belongs_Mongols
+has_completed_focus = TAN_Universal_Empire
+has_completed_focus = TAN_joseph_goebbels_war_to_sov
+
+    }
+}
+MY_TEST_TAN_genghis_khan_all_focus_completed = {
+    AND = {
+        has_completed_focus = TAN_great_mon_memory
+has_completed_focus = TAN_genghis_khan_upgrade
+has_completed_focus = TAN_Mongolia_belongs_Mongols
+has_completed_focus = TAN_Universal_Empire
+has_completed_focus = TAN_genghis_khan_war_to_sov
+
+    }
+}

@@ -1,0 +1,371 @@
+add_namespace = MY_TEST_TAN_joseph_goebbels_redline.TAN_joseph_goebbels_war_to_sov
+add_namespace = MY_TEST_TAN_joseph_goebbels_choose.TAN_Mongolia_belongs_Mongols
+add_namespace = MY_TEST_TAN_joseph_goebbels_choose.TAN_Universal_Empire
+add_namespace = MY_TEST_TAN_genghis_khan_choose.TAN_Mongolia_belongs_Mongols
+add_namespace = MY_TEST_TAN_genghis_khan_remind
+add_namespace = MY_TEST_TAN_genghis_khan_choose.TAN_Universal_Empire
+
+country_event = {
+	id = MY_TEST_TAN_joseph_goebbels_choose.TAN_Mongolia_belongs_Mongols.01
+
+	is_triggered_only = yes
+
+	trigger = {
+		MY_TEST_TAN_joseph_goebbels_is_on_the_seat = yes
+	}
+
+	immediate = {
+		set_country_flag = MY_TEST_circle_event_pending_flag
+        set_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+set_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+
+	}
+	option = {
+	name = MY_TEST_TAN_joseph_goebbels_choose.TAN_Mongolia_belongs_Mongols.TAN_Mongolia_belongs_Mongols
+	custom_effect_tooltip = MY_TEST_TAN_joseph_goebbels_choose.TAN_Mongolia_belongs_Mongols.TAN_Mongolia_belongs_Mongols_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Universal_Empire
+		has_shine_effect_on_focus = TAN_Universal_Empire
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+		set_country_flag = { flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 5 }
+		country_event = { id = TAN_joseph_goebbels_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+
+        
+	}
+}
+option = {
+	name = MY_TEST_TAN_joseph_goebbels_choose.TAN_Mongolia_belongs_Mongols.TAN_Universal_Empire
+	custom_effect_tooltip = MY_TEST_TAN_joseph_goebbels_choose.TAN_Mongolia_belongs_Mongols.TAN_Universal_Empire_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Universal_Empire
+		has_shine_effect_on_focus = TAN_Universal_Empire
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Universal_Empire
+		set_country_flag = { flag = MY_TEST_TAN_Universal_Empire_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 5 }
+		country_event = { id = TAN_joseph_goebbels_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+clr_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+
+        
+	}
+}
+
+}
+country_event = {
+	id = MY_TEST_TAN_joseph_goebbels_choose.TAN_Universal_Empire.01
+
+	is_triggered_only = yes
+
+	trigger = {
+		MY_TEST_TAN_joseph_goebbels_is_on_the_seat = yes
+	}
+
+	immediate = {
+		set_country_flag = MY_TEST_circle_event_pending_flag
+        set_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+set_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+
+	}
+	option = {
+	name = MY_TEST_TAN_joseph_goebbels_choose.TAN_Universal_Empire.TAN_Universal_Empire
+	custom_effect_tooltip = MY_TEST_TAN_joseph_goebbels_choose.TAN_Universal_Empire.TAN_Universal_Empire_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Mongolia_belongs_Mongols
+		has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Universal_Empire
+		set_country_flag = { flag = MY_TEST_TAN_Universal_Empire_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 5 }
+		country_event = { id = TAN_joseph_goebbels_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+
+        
+	}
+}
+option = {
+	name = MY_TEST_TAN_joseph_goebbels_choose.TAN_Universal_Empire.TAN_Mongolia_belongs_Mongols
+	custom_effect_tooltip = MY_TEST_TAN_joseph_goebbels_choose.TAN_Universal_Empire.TAN_Mongolia_belongs_Mongols_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Mongolia_belongs_Mongols
+		has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+		set_country_flag = { flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 5 }
+		country_event = { id = TAN_joseph_goebbels_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+
+        
+	}
+}
+
+}
+country_event = {
+	id = MY_TEST_TAN_joseph_goebbels_redline.TAN_joseph_goebbels_war_to_sov.01
+
+	is_triggered_only = yes
+
+	trigger = {
+		MY_TEST_TAN_joseph_goebbels_is_on_the_seat = yes
+	}
+
+	immediate = {
+		set_country_flag = MY_TEST_circle_event_pending_flag
+		set_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_waiting
+	}
+		option = { 
+		name = MY_TEST_TAN_joseph_goebbels_redline.TAN_joseph_goebbels_war_to_sov.continue
+		custom_effect_tooltip = MY_TEST_TAN_joseph_goebbels_redline.TAN_joseph_goebbels_war_to_sov.continue_tt
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			activate_shine_on_focus = TAN_joseph_goebbels_war_to_sov
+			set_country_flag = { flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_in_progress_flag days = 15 value = 1 }
+			set_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 5 }
+			clr_country_flag = MY_TEST_circle_event_pending_flag
+            clr_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_waiting
+			country_event = { id = TAN_joseph_goebbels_focus_control.02 days = 15 }
+
+		}
+	}
+	option = {
+		name = MY_TEST_TAN_joseph_goebbels_redline.TAN_joseph_goebbels_war_to_sov.stop
+		custom_effect_tooltip = MY_TEST_TAN_joseph_goebbels_redline.TAN_joseph_goebbels_war_to_sov.stop_tt
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			set_country_flag = TAN_joseph_goebbels_war_to_sov_was_stopped
+            clr_country_flag = MY_TEST_circle_event_pending_flag
+            clr_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_waiting
+			country_event = { id = TAN_joseph_goebbels_focus_control.01 days = 1 random_days = 1 }
+		}
+	}
+
+}
+country_event = {
+	id = MY_TEST_TAN_genghis_khan_choose.TAN_Mongolia_belongs_Mongols.01
+
+	is_triggered_only = yes
+
+	trigger = {
+		MY_TEST_TAN_genghis_khan_is_on_the_seat = yes
+	}
+
+	immediate = {
+		set_country_flag = MY_TEST_circle_event_pending_flag
+        set_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+set_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+
+	}
+	option = {
+	name = MY_TEST_TAN_genghis_khan_choose.TAN_Mongolia_belongs_Mongols.TAN_Mongolia_belongs_Mongols
+	custom_effect_tooltip = MY_TEST_TAN_genghis_khan_choose.TAN_Mongolia_belongs_Mongols.TAN_Mongolia_belongs_Mongols_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Universal_Empire
+		has_shine_effect_on_focus = TAN_Universal_Empire
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+		set_country_flag = { flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 100 }
+		country_event = { id = TAN_genghis_khan_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+
+        
+	}
+}
+option = {
+	name = MY_TEST_TAN_genghis_khan_choose.TAN_Mongolia_belongs_Mongols.TAN_Universal_Empire
+	custom_effect_tooltip = MY_TEST_TAN_genghis_khan_choose.TAN_Mongolia_belongs_Mongols.TAN_Universal_Empire_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Universal_Empire
+		has_shine_effect_on_focus = TAN_Universal_Empire
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Universal_Empire
+		set_country_flag = { flag = MY_TEST_TAN_Universal_Empire_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 100 }
+		country_event = { id = TAN_genghis_khan_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+clr_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+
+        
+	}
+}
+
+}
+country_event = {
+	id = MY_TEST_TAN_genghis_khan_choose.TAN_Universal_Empire.01
+
+	is_triggered_only = yes
+
+	trigger = {
+		MY_TEST_TAN_genghis_khan_is_on_the_seat = yes
+	}
+
+	immediate = {
+		set_country_flag = MY_TEST_circle_event_pending_flag
+        set_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+set_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+
+	}
+	option = {
+	name = MY_TEST_TAN_genghis_khan_choose.TAN_Universal_Empire.TAN_Universal_Empire
+	custom_effect_tooltip = MY_TEST_TAN_genghis_khan_choose.TAN_Universal_Empire.TAN_Universal_Empire_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Mongolia_belongs_Mongols
+		has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Universal_Empire
+		set_country_flag = { flag = MY_TEST_TAN_Universal_Empire_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 100 }
+		country_event = { id = TAN_genghis_khan_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+
+        
+	}
+}
+option = {
+	name = MY_TEST_TAN_genghis_khan_choose.TAN_Universal_Empire.TAN_Mongolia_belongs_Mongols
+	custom_effect_tooltip = MY_TEST_TAN_genghis_khan_choose.TAN_Universal_Empire.TAN_Mongolia_belongs_Mongols_tt
+	ai_chance = {
+		base = 1
+	}
+	trigger = {
+		
+OR = { has_completed_focus = TAN_great_mon_memory
+			}
+			NOT = {
+		 has_completed_focus = TAN_Mongolia_belongs_Mongols
+		has_shine_effect_on_focus = TAN_Mongolia_belongs_Mongols
+		}
+		
+        
+	}
+	hidden_effect = {
+		activate_shine_on_focus = TAN_Mongolia_belongs_Mongols
+		set_country_flag = { flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 100 }
+		country_event = { id = TAN_genghis_khan_focus_control.02 days = 15 }
+        clr_country_flag = MY_TEST_circle_event_pending_flag
+		clr_country_flag = MY_TEST_TAN_Universal_Empire_waiting
+clr_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_waiting
+
+        
+	}
+}
+
+}
+country_event = {
+	id = MY_TEST_TAN_genghis_khan_remind.TAN_genghis_khan_war_to_sov
+
+	is_triggered_only = yes
+
+	trigger = {
+		MY_TEST_TAN_genghis_khan_is_on_the_seat = yes
+	}
+
+	immediate = {
+		activate_shine_on_focus = TAN_genghis_khan_war_to_sov
+		set_country_flag = { flag = MY_TEST_TAN_genghis_khan_war_to_sov_in_progress_flag days = 15 value = 1 }
+		set_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 100 }
+		country_event = { id = TAN_genghis_khan_focus_control.02 days = 15 }
+	}
+	option = {
+		name = MY_TEST_TAN_genghis_khan_remind.TAN_genghis_khan_war_to_sov.ok
+		custom_effect_tooltip = MY_TEST_TAN_genghis_khan_remind.TAN_genghis_khan_war_to_sov.ok_tt
+		ai_chance = {
+			base = 1
+		}
+
+	}
+}

@@ -1,0 +1,302 @@
+﻿###########################################################
+####                                                   #### 
+#                         基本设置                        #
+#                        basic setting                    #
+####                                                   ####
+###########################################################
+
+# 这个码会被加在自动生成的id前面以避免游戏里什么代码重复了
+# this text will be added in front of every auto-generated id to avoid duplication
+project_code: 'MY_TEST'
+
+# 输出路径
+# output dir
+dir_output: './output'
+
+# 与钢铁雄心4可用语言一致即可
+# The languages available in Hearts of Iron 4
+list_language:
+  - english
+  - simp_chinese
+  - braz_por
+  - french
+  - german
+  - polish
+  - russian
+  - spanish
+  - japanese
+
+###########################################################
+####                                                   #### 
+#                            csv                          #
+####                                                   ####
+###########################################################
+# 本地化内容都可以传入空值
+# all localization content can be passed in empty values
+
+# 储存人物信息的csv。
+# csv store characters
+csv_characters: 'example_input/characters.csv'
+# ID：每个人物都应有一个唯一的数字，不能是0
+# ID：every character should have a unique number, can't be 0
+
+# KEY：每个人物都应有一个唯一的字符串
+# KEY：every character should have a unique string
+
+# COUNTRY：人物所在国家的tag
+# COUNTRY：tag of the country where the character is
+
+# GFX_small：人物小头像的GFX
+# GFX_small：GFX of the small portrait of the character
+
+# GFX：人物大头像的GFX
+# GFX：GFX of the big portrait of the character
+
+# NAME：人物名字。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是该语言下对应的名字字符串
+# NAME：name of the character. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is the corresponding name string in that language
+
+# DESC：人物描述。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是该语言下对应的描述字符串
+# DESC：description of the character. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is the corresponding description string in that language
+
+# TRAIT_id：人物特质在钢铁雄心4中的id。因为本程序自动控制人物的特质动态改变，这里需要一个list，储存所有人物可能获得的特质的id。
+# TRAIT_id：id of the trait in Hearts of Iron 4. Because this program automatically controls the dynamic change of the character's trait, you need a list here to store the id of all traits that the character may get.
+
+# TRAIT_loc：人物特质的本地化。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是一个list，包含每个TRAIT_id在该语言下对应的特质本地化字符串
+# TRAIT_loc：localization of the character's trait. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is a list, containing the trait localization string corresponding to each TRAIT_id in that language
+
+# TRAIT_effect：人物特质的效果。这里需要一个list，储存人物可能获得的特质的效果并与TRAIT_id一一对应。
+# TRAIT_effect：effect of the character's trait. You need a list here to store the effects of all traits that the character may get and correspond to TRAIT_id one by one.
+
+# TRAIT_limit：人物获得特质的条件。这里需要一个list，储存人物获得特质的前提条件，与TRAIT_id一一对应。
+# TRAIT_limit：conditions for the character to get the trait. You need a list here to store the prerequisites for the character to get the trait, corresponding to TRAIT_id one by one.
+
+# TRAIT_default：默认特质，会被加入characters.txt中，好像没什么用。这里需要一个list，储存人物的默认特质的TRAIT_id。
+# TRAIT_default：default trait, will be added to characters.txt, seems useless. You need a list here to store the TRAIT_id of the character's default trait.
+
+# leave_seat_tt：人物下台的tooltips提示。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是该语言下对应的字符串
+# leave_seat_tt：tooltips prompt for the character to leave. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is the corresponding string in that language
+
+# give_seat_tt：人物上台的tooltips提示。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是该语言下对应的字符串
+# give_seat_tt：tooltips prompt for the character to ascend. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is the corresponding string in that language
+
+# complete_focus_order：人物完成国策的顺序。这里需要一个list，储存所有该人物可能完成的国策的focus_id，互斥国策需要全写上。
+# complete_focus_order：order of the character to complete the focus. You need a list here to store the focus_id of all the focuses that this character may complete, and all the exclusive focuses need to be written into it.
+
+# start_focus：在人物下台时会被设为uncompleted的国策，比如原版inner circle中让人上台的国策。这里需要一个list，储存所有需要这样做的focus_id。可以为空。
+# start_focus：the focus that will be set as uncompleted when the character leaves the seat, such as the focus that lets the character ascend in the original inner circle. You need a list here to store all the focus_id that need to be done in this way. Can be empty.
+
+# 储存国策的csv。
+# csv store national_focus.
+csv_focus: 'example_input/national_focus.csv'
+
+# ID：国策的id
+# ID：id of the focus
+
+# prerequisite：前提国策。可以为空，这里需要一个深度为2的list，例：
+# prerequisite：prerequisite focus. Can be empty, you need a list with a depth of 2 here, for example:
+#    need A:[[a]]
+#    need A or B:[[a,b]]
+#    need A and B:[[a],[b]]
+#    need A and B and C:[[a],[b],[c]]
+#    need (A or B) and C:[[a,b],[c]]
+
+# mutually_exclusive：互斥国策。可以为空，这里需要一个list，储存所有互斥的focus_id。
+# mutually_exclusive：mutually exclusive focus. Can be empty, you need a list here to store all the focus_id that are mutually exclusive.
+
+# event_control_type：人物将要开始该国策时触发哪一种事件控制国策的进行。可以为空，不会自动生成这些事件的本地化文件。共有四类：
+# event_control_type：which event control the focus when the character is about to start the focus. Can be empty, and the localization files of these events will not be generated automatically. There are four types in total:
+
+  ### 事件选择event_choose
+    # 仅用于互斥国策。在所有互斥国策中让玩家选一个，封锁其他国策。建议用于两个国策一般会同时满足条件，需要玩家多选一的情况。
+    # Only for mutually exclusive focuses. Let the player choose one of all mutually exclusive focuses and block other focuses. It is recommended to be used in the situation where two focuses generally meet the conditions at the same time and the player needs to choose one.
+
+  ### 事件红线event_redline
+    # 在一个国策即将开始时，让玩家选择要不要让这个character继续点国策。
+    # When a focus is about to start, let the player choose whether to let this character continue to focus.
+
+  ### 事件提醒event_remind
+    # 只是跳一个提醒。
+    # Just a reminder.
+
+  ### 什么也不做do_nothing
+    #什么也不做。这是默认值。
+    #Do nothing. This is default value.
+
+# x：国策的x坐标
+# x：x coordinate of the focus 
+
+# y：国策的y坐标 
+# y：y coordinate of the focus
+
+# relative_position_id：国策的相对位置id。可以为空。
+# relative_position_id：relative position id of the focus. Can be empty.
+
+# cost：国策耗时几周
+# cost：how many weeks the focus will cost
+
+# available：国策可用的前提条件（P语言国策代码中的available部分中的条件语句）。可以为空。
+# available：prerequisite conditions for the focus to be available (the condition statement in the available part of the P language focus code). Can be empty.
+
+# completion_reward：国策完成后的奖励（P语言国策代码中的completion_reward部分中的奖励语句）。可以为空。
+# completion_reward：reward after the focus is completed (the reward statement in the completion_reward part of the P language focus code). Can be empty.
+
+# pause_while_events_are_pending：国策在事件待处理时是否暂停，会让人上台的国策务必设为是。可以为空，空就是否。
+# pause_while_events_are_pending：whether the focus is paused while events are pending, the focus that will let the character ascend must be set to yes. Can be empty, empty is no.
+
+# loc：国策名的本地化。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是该语言下对应的字符串
+# loc：localization of the focus name. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is the corresponding string in that language
+
+# desc：国策描述的本地化。因为涉及到本地化文件，这里需要传入一个dict，key是语言，value是该语言下对应的字符串
+# desc：localization of the focus description. Because it involves localization files, you need to pass in a dict here, the key is the language, and the value is the corresponding string in that language
+
+# icon：国策图标的GFX
+# icon：GFX of the focus icon
+
+
+# 储存其他本地化内容的csv
+# csv store other localisation content
+csv_other_loc: 'example_input/other_localisation.csv'
+
+# 这部分是本地化内容，都应传入一个dict，key是语言，value是该语言下对应的字符串
+# This part is the localization content, you should pass in a dict, the key is the language, and the value is the corresponding string in that language
+
+
+##########################################################
+####                                                  #### 
+#                  核心圈P语言代码相关设置                 #
+#        settings about inner circle P language code     #
+####                                                  ####
+##########################################################
+# Example use an inner circle with 3 seats, basically use german inner circle gui. 
+# 示例用的是一个有三个位置的核心圈，基本上用的是默认的德国核心圈gui。
+# you need to design your own gui. example use "interface\defaultgui.gui"
+# gui需要你自己设计。示例"interface\defaultgui.gui"
+
+
+# ID of inner circle window. You need to claim this ID in gui file you want to use. Example:
+# 核心圈窗口的ID。该ID需要在你想用的那个gui文件中声明，就像下面这样：
+# guiTypes = {
+#    containerWindowType = {
+#        name = "MY_TEST_focus_inlay_window"
+
+
+# list of variables store who is on the each seat
+# 储存每个位置上是什么人的variable列表
+list_seat_variables:
+  - 'MY_TEST_TAN_ascended_advisor_1'
+  - 'MY_TEST_TAN_ascended_advisor_2'
+  - 'MY_TEST_TAN_ascended_advisor_3'
+
+
+# variable store who is leaving in the process of change characters.
+# 换人时储存谁将会滚蛋的variable
+leaving_character_variable: 'MY_TEST_leaving_character_variable'
+
+
+# scripted_localisation store name of who is leaving in the process of change characters.
+# 换人时储存将会滚蛋的人的名字的scripted_localisation
+leaving_character_name_loc: 'MY_TEST_leaving_character_name'
+
+
+# scripted_localisation store trait of who is leaving in the process of change characters.
+# 换人时储存将会滚蛋的人的特质的scripted_localisation
+leaving_character_trait_loc: 'MY_TEST_leaving_character_trait'
+
+
+# variable store who is ascending in the process of change characters.
+# 换人时储存谁将会上台的variable
+ascending_character_variable: 'MY_TEST_ascending_advisor'
+
+
+# scripted_localisation store name of who is ascending in the process of change characters.
+# 换人时储存将会上台的人的名字的scripted_localisation
+ascending_character_name_loc: 'MY_TEST_ascending_character_name'
+
+
+# scripted_localisation store trait of who is ascending in the process of change characters.
+# 换人时储存将会上台的人的特质的scripted_localisation
+ascending_character_trait_loc: 'MY_TEST_ascending_character_trait'
+
+###########################################################
+####                                                   #### 
+#                   核心圈gui相关设置                      #
+#              settings about inner circle gui            #
+####                                                   ####
+###########################################################
+
+focus_inlay_window_ID: 'MY_TEST_focus_inlay_window'
+
+
+# position of inner circle window.
+# 核心圈窗口的位置。
+focus_inlay_window_x: 1100
+focus_inlay_window_y: 50
+
+
+# advisor portrait element id in gui file. （should be called in gui file）
+# 三个位置对应的gui文件中的肖像元素id，需要在gui文件中调用
+list_gui_portrait:
+  - 'ascended_advisor_1_portrait'
+  - 'ascended_advisor_2_portrait'
+  - 'ascended_advisor_3_portrait'
+
+# advisor portrait frame element id in gui file. （should be called in gui file）
+# 三个位置对应的gui文件中的肖像边框元素id，需要在gui文件中调用
+list_gui_frame:
+  - 'ascended_advisor_1_frame'
+  - 'ascended_advisor_2_frame'
+  - 'ascended_advisor_3_frame'
+
+# advisor name scripted_localisation（should be called in gui file）
+# 三个位置对应的人名的scripted_localisation，需要在gui文件中调用
+list_gui_name:
+  - 'GetName_TAN_ascended_advisor_1'
+  - 'GetName_TAN_ascended_advisor_2'
+  - 'GetName_TAN_ascended_advisor_3'
+
+
+# advisor trait name scripted_localisation（should be called in gui file）
+# 三个位置对应的特质名的scripted_localisation，需要在gui文件中调用
+list_gui_trait:
+  - 'GetTrait_TAN_ascended_advisor_1'
+  - 'GetTrait_TAN_ascended_advisor_2'
+  - 'GetTrait_TAN_ascended_advisor_3'
+
+# advisor trait desc scripted_localisation, will show while mouse stop on one character's portrait（should be called in gui file）
+# 三个位置对应的特质效果的scripted_localisation，在鼠标停在人物头像上时显示，需要在gui文件中调用
+list_gui_trait_desc:
+  - 'GetTrait_desc_TAN_ascended_advisor_1'
+  - 'GetTrait_desc_TAN_ascended_advisor_2'
+  - 'GetTrait_desc_TAN_ascended_advisor_3'
+
+###########################################################
+####                                                   #### 
+#                  自动国策控制相关设置                    #
+#           settings about focus auto control             #
+####                                                   ####
+###########################################################
+
+# focus_tree_id
+# 国策树id
+focus_tree_id: 'tan_focus'
+
+# tag use this focus_tree
+# 国策树所在国家
+focus_tree_tag: 'TAN'
+
+
+# 核心圈事件待处理标志
+# inner circle event pending flag
+circle_event_pending_flag: 'MY_TEST_circle_event_pending_flag'
+
+# 重新检查焦点的天数
+days_recheck_focus: 2
+
+# 重新检查焦点的随机天数
+days_recheck_focus_random_days: 3
+
+# 开始焦点的天数
+days_to_start_focus: 1
+
+# 开始焦点的随机天数
+days_to_start_focus_random_days: 1

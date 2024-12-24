@@ -1,0 +1,107 @@
+characters = {
+    TAN_fritz_todt = {
+        name = TAN_fritz_todt
+        portraits = {
+            army = {
+                large = GFX_portrait_GER_fritz_todt
+                small = GFX_portrait_GER_fritz_todt_small
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = TAN_fritz_todt
+            allowed = {
+                original_tag = TAN
+            }
+            available = {
+                always = no 
+            }
+            traits = {
+                TAN_fritz_todt_trait_LV1
+            }
+            ai_will_do = {
+                factor = 0
+            }
+        }
+    }
+    
+    TAN_albert_speer = {
+        name = TAN_albert_speer
+        portraits = {
+            army = {
+                large = GFX_portrait_GER_albert_speer
+                small = GFX_portrait_GER_albert_speer_small
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = TAN_albert_speer
+            allowed = {
+                original_tag = TAN
+            }
+            available = {
+                always = no 
+            }
+            traits = {
+                TAN_albert_speer_trait_LV1
+            }
+            ai_will_do = {
+                factor = 0
+            }
+        }
+    }
+    
+    TAN_joseph_goebbels = {
+        name = TAN_joseph_goebbels
+        portraits = {
+            army = {
+                large = GFX_portrait_GER_joseph_goebbels
+                small = GFX_portrait_GER_joseph_goebbels_small
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = TAN_joseph_goebbels
+            allowed = {
+                original_tag = TAN
+            }
+            available = {
+                always = no 
+            }
+            traits = {
+                TAN_joseph_goebbels_trait_LV1
+TAN_joseph_goebbels_Poliomyelitis
+            }
+            ai_will_do = {
+                factor = 0
+            }
+        }
+    }
+    
+    TAN_genghis_khan = {
+        name = TAN_genghis_khan
+        portraits = {
+            army = {
+                large = GFX_portrait_GER_otto_strasser
+                small = GFX_portrait_GER_otto_strasser_small
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = TAN_genghis_khan
+            allowed = {
+                original_tag = TAN
+            }
+            available = {
+                always = no 
+            }
+            traits = {
+                TAN_genghis_khan_trait_LV1
+            }
+            ai_will_do = {
+                factor = 0
+            }
+        }
+    }
+    
+}

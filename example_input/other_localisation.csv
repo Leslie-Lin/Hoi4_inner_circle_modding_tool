@@ -1,0 +1,56 @@
+﻿id,localisation,comment
+choose_who_leave_seat_event_title,"{""english"":""Change character event"", 
+""german"": ""Change character event"", 
+""simp_chinese"":""换人事件""}",
+choose_who_leave_seat_event_desc,"{""english"":""Our inner circle has no empty seat for our great [MY_TEST_ascending_character_trait], [MY_TEST_ascending_character_name]. It's a pity, but we have to let someone leave."", 
+""german"": ""Our inner circle has no empty seat for our great [MY_TEST_ascending_character_trait], [MY_TEST_ascending_character_name]. It's a pity, but we have to let someone leave."", 
+""simp_chinese"":""我们的核心圈目前没有空位留给[MY_TEST_ascending_character_trait], [MY_TEST_ascending_character_name]。我们只能让某个人离开。""}",
+choose_who_leave_seat_event_option_title,"{""english"":""Let {0} leave"", 
+""german"": ""Let {0} leave"", 
+""simp_chinese"":""让{}离开""}","The advisor name scripted_localisation corresponding to this seat will be filled in when it is automatically generated.
+自动生成时，文本中的空位会被自动填入这个选项对应的位置的顾问姓名scripted_localisation
+"
+choose_who_leave_seat_event_option_tt,"{""english"":""[MY_TEST_ascending_character_trait], [MY_TEST_ascending_character_name] will replace {0}, {1}"", 
+""german"": ""[MY_TEST_ascending_character_trait], [MY_TEST_ascending_character_name] will replace {0}, {1}"", 
+""simp_chinese"":""[MY_TEST_ascending_character_trait], [MY_TEST_ascending_character_name] 将会换下 {0}，{1}""}","The advisor trait scripted_localisation and advisor name scripted_localisation corresponding to this seat will be filled in when it is automatically generated.
+自动生成时，文本中的空位会被自动填入这个选项对应的位置的顾问特质scripted_localisation和顾问姓名scripted_localisation
+"
+choose_who_leave_seat_event_option_no_one_leave_option_title,"{""english"":""What a pity! [MY_TEST_ascending_character_name] has no seat! "", 
+""german"": ""What a pity! [MY_TEST_ascending_character_name] has no seat! "", 
+""simp_chinese"":""真糟糕，看来[MY_TEST_ascending_character_name]没位置了。""}",
+choose_who_leave_seat_event_option_no_one_leave_option_tt,"{""english"":""[MY_TEST_ascending_character_name] will not be ascended. "", 
+""german"": ""[MY_TEST_ascending_character_name] will not be ascended. "", 
+""simp_chinese"":""[MY_TEST_ascending_character_name]将不会进入核心圈""}",
+is_on_the_seat_tt,"{""english"":""{0} is in the inner circle"", 
+""german"": ""{0} is in the inner circle"", 
+""simp_chinese"":""{0} 在核心圈中""}","The advisor name scripted_localisation corresponding to this seat will be filled in when it is automatically generated.
+自动生成时，文本中的空位会被自动填入这个选项对应的位置的顾问姓名scripted_localisation
+"
+give_seat_tt,"{""english"":""{0} will get a seat in inner circle"", 
+""german"": ""{0} will get a seat in inner circle"", 
+""simp_chinese"":""{0} 将进入核心圈""}","The advisor name scripted_localisation corresponding to this seat will be filled in when it is automatically generated.
+自动生成时，文本中的空位会被自动填入这个选项对应的位置的顾问姓名scripted_localisation
+"
+leave_seat_tt,"{""english"":""{0} will leave inner circle"", 
+""german"": ""{0} will leave inner circle"", 
+""simp_chinese"":""{0} 将离开核心圈""}","The advisor name scripted_localisation corresponding to this seat will be filled in when it is automatically generated.
+自动生成时，文本中的空位会被自动填入这个选项对应的位置的顾问姓名scripted_localisation
+"
+inner_circle_focus_in_progress_tt,"{""english"":""§Y$CHARACTER$§! is working on this focus. \nProgress: §Y$FLAG_DAYS$§!/[?temp_focus_days] days"", 
+""german"": ""§Y$CHARACTER$§! is working on this focus. \nProgress: §Y$FLAG_DAYS$§!/[?temp_focus_days] days"", 
+""simp_chinese"":""§Y$CHARACTER$§!正致力于该国策。\n进度：§Y$FLAG_DAYS$§!/[?temp_focus_days]天""}",
+focus_can_only_be_completed_by_advisor_0_tt,"{""english"":""This focus can only be started by a character."", 
+""german"": ""This focus can only be started by a character."", 
+""simp_chinese"":""该国策只能由某位顾问开始。""}",
+focus_can_only_be_completed_by_advisor_1_tt,"{""english"":""This focus can only be started by §Y$CHARACTER1$§! ."", 
+""german"": ""This focus can only be started by §Y$CHARACTER1$§! ."", 
+""simp_chinese"":""该国策只能由§Y$CHARACTER1$§!开始。""}",
+focus_can_only_be_completed_by_advisor_2_tt,"{""english"":""This focus can only be started by §Y$CHARACTER1$§! or §Y$CHARACTER2$§! ."", 
+""german"": ""This focus can only be started by §Y$CHARACTER1$§! or §Y$CHARACTER2$§! ."", 
+""simp_chinese"":""该国策只能由§Y$CHARACTER1$§!或§Y$CHARACTER2$§!开始。""}",
+focus_can_only_be_completed_by_advisor_3_tt,"{""english"":""This focus can only be started by §Y$CHARACTER1$§! or §Y$CHARACTER2$§! or §Y$CHARACTER3$§! ."", 
+""german"":""This focus can only be started by §Y$CHARACTER1$§! or §Y$CHARACTER2$§! or §Y$CHARACTER3$§! ."", 
+""simp_chinese"":""该国策只能由§Y$CHARACTER1$§!或§Y$CHARACTER2$§!或§Y$CHARACTER3$§!开始。""}",
+focus_can_only_be_completed_by_advisor_4_tt,"{""english"":""This focus can only be started by §Y$CHARACTER1$§! or §Y$CHARACTER2$§! or §Y$CHARACTER3$§! or §Y$CHARACTER4$§! ."", 
+""german"":""This focus can only be started by §Y$CHARACTER1$§! or §Y$CHARACTER2$§! or §Y$CHARACTER3$§! or §Y$CHARACTER4$§! .."", 
+""simp_chinese"":""该国策只能由§Y$CHARACTER1$§!或§Y$CHARACTER2$§!或§Y$CHARACTER3$§!或§Y$CHARACTER4$§!开始。""}",

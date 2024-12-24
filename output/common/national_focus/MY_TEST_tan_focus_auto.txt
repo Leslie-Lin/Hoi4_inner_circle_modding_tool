@@ -1,0 +1,872 @@
+focus_tree = {
+    id = tan_focus
+    
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TAN
+		}
+	}
+
+	initial_show_position = {
+		x = 76
+		y = 0
+	}
+    
+    default = no
+    
+    inlay_window = {
+        id = MY_TEST_focus_inlay_window
+        position = { x = 1100 y = 50 }
+    }
+    
+        focus = {
+        id = TAN_circe_enable
+        icon = GFX_focus_GER_support_the_fuhrer_historical
+
+        
+        
+        
+
+        x = 5
+        y = 0
+        cost = 1
+        
+
+        available = {
+            
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            TEST_init = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_fritz_todt_enable
+        icon = GFX_focus_GER_ascension_of_todt
+
+        prerequisite = { focus = TAN_circe_enable }
+        
+        
+        
+
+        x = 1
+        y = 1
+        cost = 1
+        
+
+        available = {
+            
+            
+            			if = {
+				limit = {
+					has_country_flag = MY_TEST_circle_event_pending_flag
+				}
+				NOT = { has_country_flag = MY_TEST_circle_event_pending_flag }
+			}
+        }
+
+        		cancel_if_invalid = no
+		continue_if_invalid = no
+
+        completion_reward = {
+            MY_TEST_TAN_fritz_todt_give_seat = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_albert_speer_enable
+        icon = GFX_focus_GER_ascension_of_speer
+
+        prerequisite = { focus = TAN_circe_enable }
+        
+        
+        
+
+        x = 3
+        y = 1
+        cost = 1
+        
+
+        available = {
+            
+            
+            			if = {
+				limit = {
+					has_country_flag = MY_TEST_circle_event_pending_flag
+				}
+				NOT = { has_country_flag = MY_TEST_circle_event_pending_flag }
+			}
+        }
+
+        		cancel_if_invalid = no
+		continue_if_invalid = no
+
+        completion_reward = {
+            MY_TEST_TAN_albert_speer_give_seat = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_joseph_goebbels_enable
+        icon = GFX_focus_GER_ascension_of_goebbels
+
+        prerequisite = { focus = TAN_circe_enable }
+        
+        
+        
+
+        x = 5
+        y = 1
+        cost = 1
+        
+
+        available = {
+            
+            
+            			if = {
+				limit = {
+					has_country_flag = MY_TEST_circle_event_pending_flag
+				}
+				NOT = { has_country_flag = MY_TEST_circle_event_pending_flag }
+			}
+        }
+
+        		cancel_if_invalid = no
+		continue_if_invalid = no
+
+        completion_reward = {
+            MY_TEST_TAN_joseph_goebbels_give_seat = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_genghis_khan_enable
+        icon = GFX_focus_generic_horse_studs
+
+        prerequisite = { focus = TAN_circe_enable }
+        
+        
+        
+
+        x = 9
+        y = 1
+        cost = 1
+        
+
+        available = {
+            
+            
+            			if = {
+				limit = {
+					has_country_flag = MY_TEST_circle_event_pending_flag
+				}
+				NOT = { has_country_flag = MY_TEST_circle_event_pending_flag }
+			}
+        }
+
+        		cancel_if_invalid = no
+		continue_if_invalid = no
+
+        completion_reward = {
+            MY_TEST_TAN_genghis_khan_give_seat = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_fritz_todt_upgrade
+        icon = GFX_focus_generic_military_mission
+
+        prerequisite = { focus = TAN_fritz_todt_enable }
+        
+        
+        
+
+        x = 0
+        y = 2
+        cost = 2
+        relative_position_id = TAN_fritz_todt_enable
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_fritz_todt_upgrade_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_fritz_todt_upgrade_doing_focus_advisor = 1 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_fritz_todt
+                            FLAG_DAYS = [?MY_TEST_TAN_fritz_todt_upgrade_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_1_tt
+                        CHARACTER1 = TAN_fritz_todt
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            	add_to_variable = { var = TAN_fritz_todt_LV value = 1 }
+	MY_TEST_TAN_fritz_todt_change_trait_effect = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_albert_speer_upgrade
+        icon = GFX_focus_generic_military_mission
+
+        prerequisite = { focus = TAN_albert_speer_enable }
+        
+        
+        
+
+        x = 0
+        y = 2
+        cost = 2
+        relative_position_id = TAN_albert_speer_enable
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_albert_speer_upgrade_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_albert_speer_upgrade_doing_focus_advisor = 2 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_albert_speer
+                            FLAG_DAYS = [?MY_TEST_TAN_albert_speer_upgrade_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_1_tt
+                        CHARACTER1 = TAN_albert_speer
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            	add_to_variable = { var = TAN_albert_speer_LV value = 1 }
+	MY_TEST_TAN_albert_speer_change_trait_effect = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_joseph_goebbels_upgrade
+        icon = GFX_focus_generic_military_mission
+
+        prerequisite = { focus = TAN_joseph_goebbels_enable }
+        
+        
+        
+
+        x = 0
+        y = 2
+        cost = 2
+        relative_position_id = TAN_joseph_goebbels_enable
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_joseph_goebbels_upgrade_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_joseph_goebbels_upgrade_doing_focus_advisor = 5 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_joseph_goebbels
+                            FLAG_DAYS = [?MY_TEST_TAN_joseph_goebbels_upgrade_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_1_tt
+                        CHARACTER1 = TAN_joseph_goebbels
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            	add_to_variable = { var = TAN_joseph_goebbels_LV value = 1 }
+	MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_genghis_khan_upgrade
+        icon = GFX_focus_generic_military_mission
+
+        prerequisite = { focus = TAN_genghis_khan_enable }
+        
+        
+        
+
+        x = 0
+        y = 2
+        cost = 2
+        relative_position_id = TAN_genghis_khan_enable
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_genghis_khan_upgrade_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_genghis_khan_upgrade_doing_focus_advisor = 100 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_genghis_khan
+                            FLAG_DAYS = [?MY_TEST_TAN_genghis_khan_upgrade_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_1_tt
+                        CHARACTER1 = TAN_genghis_khan
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            	add_to_variable = { var = TAN_genghis_khan_LV value = 1 }
+	MY_TEST_TAN_genghis_khan_change_trait_effect = yes
+        }
+
+    }
+
+    focus = {
+        id = TAN_industry_development
+        icon = GFX_focus_generic_industry_2
+
+        prerequisite = { focus = TAN_fritz_todt_enable focus = TAN_albert_speer_enable }
+        
+        
+        
+
+        x = 1
+        y = 1
+        cost = 2
+        relative_position_id = TAN_fritz_todt_enable
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_industry_development_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 1 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_fritz_todt
+                            FLAG_DAYS = [?MY_TEST_TAN_industry_development_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+                else_if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_industry_development_doing_focus_advisor = 2 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_albert_speer
+                            FLAG_DAYS = [?MY_TEST_TAN_industry_development_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_2_tt
+                        CHARACTER1 = TAN_fritz_todt
+                        CHARACTER2 = TAN_albert_speer
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            
+        }
+
+    }
+
+    focus = {
+        id = TAN_great_mon_memory
+        icon = GFX_focus_eng_global_defense
+
+        prerequisite = { focus = TAN_joseph_goebbels_enable }
+        prerequisite = { focus = TAN_genghis_khan_enable }
+        
+        
+        
+
+        x = 2
+        y = 1
+        cost = 2
+        relative_position_id = TAN_joseph_goebbels_enable
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_great_mon_memory_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 5 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_joseph_goebbels
+                            FLAG_DAYS = [?MY_TEST_TAN_great_mon_memory_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+                else_if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_great_mon_memory_doing_focus_advisor = 100 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_genghis_khan
+                            FLAG_DAYS = [?MY_TEST_TAN_great_mon_memory_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_2_tt
+                        CHARACTER1 = TAN_joseph_goebbels
+                        CHARACTER2 = TAN_genghis_khan
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            
+        }
+
+    }
+
+    focus = {
+        id = TAN_Mongolia_belongs_Mongols
+        icon = GFX_goal_support_fascism
+
+        prerequisite = { focus = TAN_great_mon_memory }
+        
+        mutually_exclusive = { focus = TAN_Universal_Empire }
+        
+        # event_control_type: event_choose
+
+        x = -1
+        y = 2
+        cost = 2
+        relative_position_id = TAN_great_mon_memory
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 5 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_joseph_goebbels
+                            FLAG_DAYS = [?MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+                else_if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_Mongolia_belongs_Mongols_doing_focus_advisor = 100 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_genghis_khan
+                            FLAG_DAYS = [?MY_TEST_TAN_Mongolia_belongs_Mongols_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_2_tt
+                        CHARACTER1 = TAN_joseph_goebbels
+                        CHARACTER2 = TAN_genghis_khan
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            
+        }
+
+    }
+
+    focus = {
+        id = TAN_Universal_Empire
+        icon = GFX_focus_eng_global_defense
+
+        prerequisite = { focus = TAN_great_mon_memory }
+        
+        mutually_exclusive = { focus = TAN_Mongolia_belongs_Mongols }
+        
+        # event_control_type: event_choose
+
+        x = 1
+        y = 2
+        cost = 2
+        relative_position_id = TAN_great_mon_memory
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_Universal_Empire_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 5 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_joseph_goebbels
+                            FLAG_DAYS = [?MY_TEST_TAN_Universal_Empire_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+                else_if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_Universal_Empire_doing_focus_advisor = 100 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_genghis_khan
+                            FLAG_DAYS = [?MY_TEST_TAN_Universal_Empire_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_2_tt
+                        CHARACTER1 = TAN_joseph_goebbels
+                        CHARACTER2 = TAN_genghis_khan
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            
+        }
+
+    }
+
+    focus = {
+        id = TAN_joseph_goebbels_war_to_sov
+        icon = GFX_focus_attack_soviet
+
+        prerequisite = { focus = TAN_joseph_goebbels_upgrade }
+        
+        
+        # event_control_type: event_redline
+
+        x = 0
+        y = 2
+        cost = 2
+        relative_position_id = TAN_joseph_goebbels_upgrade
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_joseph_goebbels_war_to_sov_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_joseph_goebbels_war_to_sov_doing_focus_advisor = 5 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_joseph_goebbels
+                            FLAG_DAYS = [?MY_TEST_TAN_joseph_goebbels_war_to_sov_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_1_tt
+                        CHARACTER1 = TAN_joseph_goebbels
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            
+        }
+
+    }
+
+    focus = {
+        id = TAN_genghis_khan_war_to_sov
+        icon = GFX_focus_attack_soviet
+
+        prerequisite = { focus = TAN_genghis_khan_upgrade }
+        
+        
+        # event_control_type: event_remind
+
+        x = 0
+        y = 2
+        cost = 2
+        relative_position_id = TAN_genghis_khan_upgrade
+
+        available = {
+            if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+                limit = {
+                    has_country_flag = MY_TEST_TAN_genghis_khan_war_to_sov_in_progress_flag
+                }
+                set_temp_variable = { temp_focus_days = 2 } #For tooltip purposes
+                multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+                
+                if = { #someone working on it
+                    limit = {
+                        check_variable = { MY_TEST_TAN_genghis_khan_war_to_sov_doing_focus_advisor = 100 }
+                    }
+                    custom_override_tooltip = {
+                        tooltip = {
+                            localization_key = MY_TEST_inner_circle_focus_in_progress_tt
+                            CHARACTER = TAN_genghis_khan
+                            FLAG_DAYS = [?MY_TEST_TAN_genghis_khan_war_to_sov_in_progress_flag:days]
+                        }
+                        always = no 
+                    }
+                }
+
+            }
+
+            else = { #NOT BEEN WORKED ON (Just Explain)
+                custom_override_tooltip = {
+                    tooltip = {
+                        localization_key = MY_TEST_focus_can_only_be_completed_by_advisor_1_tt
+                        CHARACTER1 = TAN_genghis_khan
+
+                    }
+                    always = no
+                }
+            }
+
+
+            
+            
+        }
+
+        
+
+        completion_reward = {
+            
+        }
+
+    }
+
+
+}

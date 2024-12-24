@@ -1,0 +1,8 @@
+
+TEST_init={
+	set_variable = { TAN_fritz_todt_LV = 1 }
+	set_variable = { TAN_albert_speer_LV = 1 }
+	set_variable = { TAN_joseph_goebbels_LV = 1 }
+	set_variable = { TAN_genghis_khan_LV = 1 }
+
+}

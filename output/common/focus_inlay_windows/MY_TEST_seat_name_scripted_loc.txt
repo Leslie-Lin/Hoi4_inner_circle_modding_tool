@@ -1,0 +1,81 @@
+MY_TEST_focus_inlay_window = {
+            
+    window_name = MY_TEST_focus_inlay_window
+
+    internal = yes
+    visible = {
+        always=yes
+    }
+    scripted_images = {        ascended_advisor_1_portrait = {
+            GFX_blank_leader_portrait = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 }
+            }
+            GFX_portrait_GER_fritz_todt = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 1 }
+            }
+            GFX_portrait_GER_albert_speer = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 2 }
+            }
+            GFX_portrait_GER_joseph_goebbels = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 5 }
+            }
+            GFX_portrait_GER_otto_strasser = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 100 }
+            }
+        }
+        ascended_advisor_2_portrait = {
+            GFX_blank_leader_portrait = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 }
+            }
+            GFX_portrait_GER_fritz_todt = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 1 }
+            }
+            GFX_portrait_GER_albert_speer = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 2 }
+            }
+            GFX_portrait_GER_joseph_goebbels = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 5 }
+            }
+            GFX_portrait_GER_otto_strasser = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 100 }
+            }
+        }
+        ascended_advisor_3_portrait = {
+            GFX_blank_leader_portrait = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 }
+            }
+            GFX_portrait_GER_fritz_todt = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 1 }
+            }
+            GFX_portrait_GER_albert_speer = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 2 }
+            }
+            GFX_portrait_GER_joseph_goebbels = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 5 }
+            }
+            GFX_portrait_GER_otto_strasser = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 100 }
+            }
+        }
+     ascended_advisor_1_frame = {
+            GFX_ascended_advisors_frame = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_1 = 0 compare = not_equals }	
+            }
+            GFX_ascended_advisors_unappointed_frame = yes
+        }
+     ascended_advisor_2_frame = {
+            GFX_ascended_advisors_frame = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_2 = 0 compare = not_equals }	
+            }
+            GFX_ascended_advisors_unappointed_frame = yes
+        }
+     ascended_advisor_3_frame = {
+            GFX_ascended_advisors_frame = {
+                check_variable = { MY_TEST_TAN_ascended_advisor_3 = 0 compare = not_equals }	
+            }
+            GFX_ascended_advisors_unappointed_frame = yes
+        }
+
+}
+
+    }

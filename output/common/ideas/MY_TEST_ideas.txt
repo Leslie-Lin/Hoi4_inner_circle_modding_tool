@@ -1,0 +1,206 @@
+ideas = {
+         hidden_ideas = {
+   
+      TAN_fritz_todt_trait_LV1_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         production_speed_buildings_factor = 0.05
+fascism_drift = 0.01
+         }
+      }
+         
+      TAN_fritz_todt_trait_LV2_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         production_speed_buildings_factor = 0.1
+fascism_drift = 0.01
+         }
+      }
+         
+      TAN_fritz_todt_trait_LV3_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         production_speed_buildings_factor = 0.15
+fascism_drift = 0.01
+         }
+      }
+         
+      TAN_albert_speer_trait_LV1_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         production_speed_buildings_factor = 0.05
+fascism_drift = 0.01
+industrial_capacity_factory = 0.1
+industrial_capacity_dockyard = 0.1
+         }
+      }
+         
+      TAN_albert_speer_trait_LV2_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         production_speed_buildings_factor = 0.1
+fascism_drift = 0.01
+industrial_capacity_factory = 0.15
+industrial_capacity_dockyard = 0.15
+         }
+      }
+         
+      TAN_albert_speer_trait_LV3_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         production_speed_buildings_factor = 0.15
+fascism_drift = 0.01
+industrial_capacity_factory = 0.2
+industrial_capacity_dockyard = 0.2
+         }
+      }
+         
+      TAN_joseph_goebbels_trait_LV1_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         war_support_factor = 0.05
+fascism_drift = 0.1
+         }
+      }
+         
+      TAN_joseph_goebbels_trait_LV2_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         war_support_factor = 0.15
+fascism_drift = 0.2
+         }
+      }
+         
+      TAN_joseph_goebbels_trait_LV3_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         war_support_factor = 0.25
+fascism_drift = 0.3
+         }
+      }
+         
+      TAN_joseph_goebbels_Poliomyelitis_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         war_support_factor = -0.05
+
+         }
+      }
+         
+      TAN_joseph_goebbels_Propaganda_master_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         industrial_capacity_factory = 0.1
+industrial_capacity_dockyard = 0.1
+         }
+      }
+         
+      TAN_genghis_khan_trait_LV1_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         cavalry_attack_factor = 0.3
+modifier_army_sub_unit_cavalry_speed_factor = 0.1
+         }
+      }
+         
+      TAN_genghis_khan_trait_LV2_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         cavalry_attack_factor = 0.4
+modifier_army_sub_unit_cavalry_speed_factor = 0.15
+         }
+      }
+         
+      TAN_genghis_khan_trait_LV3_idea = {
+         
+            allowed = {
+               always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+         cavalry_attack_factor = 0.5
+modifier_army_sub_unit_cavalry_speed_factor = 0.2
+         }
+      }
+         
+}}

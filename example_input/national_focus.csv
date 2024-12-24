@@ -1,0 +1,80 @@
+﻿ID,prerequisite,mutually_exclusive,event_control_type,x,y,relative_position_id,cost,available,completion_reward,pause_while_events_are_pending,loc,desc,icon
+TAN_circe_enable,,,,5,0,,1,,TEST_init = yes,,"{""english"":""Enable inner circle"", 
+""german"":""Enable inner circle"", 
+""simp_chinese"":""启用核心圈""}","{""english"":""Enable inner circle. completion_reward contains init effects, these effects should be written in history file"", 
+""german"":""Enable inner circle. completion_reward contains init effects, these effects should be written in history file"", 
+""simp_chinese"":""启用核心圈。completion_reward中包含初始化需要的代码，这些代码应该写在history文件里。""}",GFX_focus_GER_support_the_fuhrer_historical
+TAN_fritz_todt_enable,"[[""TAN_circe_enable""]]",,,1,1,,1,,MY_TEST_TAN_fritz_todt_give_seat = yes,1,"{""english"":""Reichsleiter Fritz Todt"", 
+""german"":""Reichsleiter Fritz Todt"", 
+""simp_chinese"":""全国领导弗里茨·托特""}","{""english"":""Reichsleiter Fritz Todt"", 
+""german"":""Reichsleiter Fritz Todt"", 
+""simp_chinese"":""全国领导弗里茨·托特""}",GFX_focus_GER_ascension_of_todt
+TAN_albert_speer_enable,"[[""TAN_circe_enable""]]",,,3,1,,1,,MY_TEST_TAN_albert_speer_give_seat = yes,1,"{""english"":""Reichsleiter Albert Speer"", 
+""german"":""Reichsleiter Albert Speer"", 
+""simp_chinese"":""全国领导阿尔伯特·施佩尔""}","{""english"":""Reichsleiter Albert Speer"", 
+""german"":""Reichsleiter Albert Speer"", 
+""simp_chinese"":""全国领导阿尔伯特·施佩尔""}",GFX_focus_GER_ascension_of_speer
+TAN_joseph_goebbels_enable,"[[""TAN_circe_enable""]]",,,5,1,,1,,MY_TEST_TAN_joseph_goebbels_give_seat = yes,1,"{""english"":""Reichsleiter Joseph Goebbels"", 
+""german"":""Reichsleiter Joseph Goebbels"", 
+""simp_chinese"":""全国领导约瑟夫·戈培尔""}","{""english"":""Reichsleiter Joseph Goebbels"", 
+""german"":""Reichsleiter Joseph Goebbels"", 
+""simp_chinese"":""全国领导约瑟夫·戈培尔""}",GFX_focus_GER_ascension_of_goebbels
+TAN_genghis_khan_enable,"[[""TAN_circe_enable""]]",,,9,1,,1,,MY_TEST_TAN_genghis_khan_give_seat = yes,1,"{""english"":""Genghis Khan! "", 
+""german"":""Genghis Khan! "", 
+""simp_chinese"":""成吉思汗！""}","{""english"":""Genghis Khan! "", 
+""german"":""Genghis Khan! "", 
+""simp_chinese"":""成吉思汗！""}",GFX_focus_generic_horse_studs
+TAN_fritz_todt_upgrade,"[[""TAN_fritz_todt_enable""]]",,,0,2,TAN_fritz_todt_enable,2,,"	add_to_variable = { var = TAN_fritz_todt_LV value = 1 }
+	MY_TEST_TAN_fritz_todt_change_trait_effect = yes",,"{""english"":""Upgrade Fritz Todt"", 
+""german"":""Upgrade Fritz Todt"", 
+""simp_chinese"":""升级弗里茨·托特""}","{""english"":""Upgrade Fritz Todt"", 
+""german"":""Upgrade Fritz Todt"", 
+""simp_chinese"":""升级弗里茨·托特""}",GFX_focus_generic_military_mission
+TAN_albert_speer_upgrade,"[[""TAN_albert_speer_enable""]]",,,0,2,TAN_albert_speer_enable,2,,"	add_to_variable = { var = TAN_albert_speer_LV value = 1 }
+	MY_TEST_TAN_albert_speer_change_trait_effect = yes",,"{""english"":""Upgrade Albert Speer"", 
+""german"":""Upgrade Albert Speer"", 
+""simp_chinese"":""升级阿尔伯特·施佩尔""}","{""english"":""Upgrade Albert Speer"", 
+""german"":""Upgrade Albert Speer"", 
+""simp_chinese"":""升级阿尔伯特·施佩尔""}",GFX_focus_generic_military_mission
+TAN_joseph_goebbels_upgrade,"[[""TAN_joseph_goebbels_enable""]]",,,0,2,TAN_joseph_goebbels_enable,2,,"	add_to_variable = { var = TAN_joseph_goebbels_LV value = 1 }
+	MY_TEST_TAN_joseph_goebbels_change_trait_effect = yes",,"{""english"":""Upgrade Joseph Goebbels"", 
+""german"":""Upgrade Joseph Goebbels"", 
+""simp_chinese"":""升级约瑟夫·戈培尔""}","{""english"":""Upgrade Joseph Goebbels"", 
+""german"":""Upgrade Joseph Goebbels"", 
+""simp_chinese"":""升级约瑟夫·戈培尔""}",GFX_focus_generic_military_mission
+TAN_genghis_khan_upgrade,"[[""TAN_genghis_khan_enable""]]",,,0,2,TAN_genghis_khan_enable,2,,"	add_to_variable = { var = TAN_genghis_khan_LV value = 1 }
+	MY_TEST_TAN_genghis_khan_change_trait_effect = yes",,"{""english"":""Upgrade Genghis Khan"", 
+""german"":""Upgrade Genghis Khan"", 
+""simp_chinese"":""升级成吉思汗""}","{""english"":""Upgrade Genghis Khan"", 
+""german"":""Upgrade Genghis Khan"", 
+""simp_chinese"":""升级成吉思汗""}",GFX_focus_generic_military_mission
+TAN_industry_development,"[[""TAN_fritz_todt_enable"", ""TAN_albert_speer_enable""]]",,,1,1,TAN_fritz_todt_enable,2,,,,"{""english"":""Industry development"", 
+""german"":""Industry development"", 
+""simp_chinese"":""工业发展""}","{""english"":""This is an example of a national focus that can be carried out if any of the prerequisites national focus are met"", 
+""german"":""This is an example of a national focus that can be carried out if any of the prerequisites national focus are met"", 
+""simp_chinese"":""这是满足任一前提即可进行的国策的示例""}",GFX_focus_generic_industry_2
+TAN_great_mon_memory,"[[""TAN_joseph_goebbels_enable""], [""TAN_genghis_khan_enable""]]",,,2,1,TAN_joseph_goebbels_enable,2,,,,"{""english"":""Great mongolia memory"", 
+""german"":""Great mongolia memory"", 
+""simp_chinese"":""重拾蒙古帝国记忆""}","{""english"":""This is an example of a national focus that can be carried out if all of the prerequisites national focuses are met"", 
+""german"":""This is an example of a national focus that can be carried out only when all of the prerequisites national focuses are met"", 
+""simp_chinese"":""这是满足全部前提国策才可进行的国策的示例""}",GFX_focus_eng_global_defense
+TAN_Mongolia_belongs_Mongols,"[[""TAN_great_mon_memory""]]","[""TAN_Universal_Empire""]",event_choose,-1,2,TAN_great_mon_memory,2,,,,"{""english"":""Mongolia that belongs to the Mongols"", 
+""german"":""Mongolia that belongs to the Mongols"", 
+""simp_chinese"":""蒙古人的蒙古""}","{""english"":""This is an example of event_control_type, event_choose"", 
+""german"":""This is an example of event_control_type, event_choose"", 
+""simp_chinese"":""这是事件控制类型event_choose的示例""}",GFX_goal_support_fascism
+TAN_Universal_Empire,"[[""TAN_great_mon_memory""]]","[""TAN_Mongolia_belongs_Mongols""]",event_choose,1,2,TAN_great_mon_memory,2,,,,"{""english"":""Universal Empire"", 
+""german"":""Universal Empire"", 
+""simp_chinese"":""普世帝国""}","{""english"":""This is an example of event_control_type, event_choose"", 
+""german"":""This is an example of event_control_type, event_choose"", 
+""simp_chinese"":""这是事件控制类型event_choose的示例""}",GFX_focus_eng_global_defense
+TAN_joseph_goebbels_war_to_sov,"[[""TAN_joseph_goebbels_upgrade""]]",,event_redline,0,2,TAN_joseph_goebbels_upgrade,2,,,,"{""english"":""Lebensraum"", 
+""german"":""Lebensraum"", 
+""simp_chinese"":""生存空间""}","{""english"":""War to SOV! You can stop him, this is example of event_control_type event_redline"", 
+""german"":""War to SOV! You can stop him, this is example of event_control_type event_redline"", 
+""simp_chinese"":""向苏联宣战！你可以阻止他，这是事件控制类型event_redline的演示""}",GFX_focus_attack_soviet
+TAN_genghis_khan_war_to_sov,"[[""TAN_genghis_khan_upgrade""]]",,event_remind,0,2,TAN_genghis_khan_upgrade,2,,,,"{""english"":""Mongke Tangririririlalalala"", 
+""german"":""Mongke Tangririririlalalala"", 
+""simp_chinese"":""腾格里哩哩哩哩哩哩啦啦""}","{""english"":""War to SOV! You can't stop him, this is example of event_control_type event_remind"", 
+""german"":""War to SOV! You can't stop him, this is example of event_control_type event_remind"", 
+""simp_chinese"":""向苏联宣战！你无法阻止他，这是事件控制类型event_remind的演示""}",GFX_focus_attack_soviet
